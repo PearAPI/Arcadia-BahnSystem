@@ -1,0 +1,41 @@
+{
+    "$schema": "https://raw.githubusercontent.com/TypeScriptToLua/TypeScriptToLua/master/tsconfig-schema.json",
+    "compilerOptions": {
+        "target": "ES6",
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "moduleResolution": "Node",
+        "types": [],
+        "strict": true,
+        "baseUrl": "./lib/OpenComputers-Type-Declaration",
+        "outDir": "./dist",
+    },
+    "tstl": {
+        "noHeader": true, // Well, if you want to, you can add headers back
+        "luaTarget": "5.3", // OpenComputer supports 5.3, so I'll be using 5.3 in this case
+        "noResolvePaths": [
+            "colors",
+            "component",
+            "computer",
+            "event",
+            "filesystem",
+            "internet",
+            "keyboard",
+            "note",
+            "os",
+            "process",
+            "robot",
+            "serialization",
+            "shell",
+            "sides",
+            "term",
+            "text",
+            "thread",
+            "transformers",
+            "unicode",
+            "uuid"
+        ] // It's in /lib/, so it won't try and reolsve those libraries provided by OpenOS
+    }
+}
