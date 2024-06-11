@@ -1,5 +1,10 @@
 {
     "$schema": "https://raw.githubusercontent.com/TypeScriptToLua/TypeScriptToLua/master/tsconfig-schema.json",
+    "exclude": [
+        "node_modules",
+        "dist",
+        "lib/**/tests",
+    ],
     "compilerOptions": {
         "target": "ES6",
         "lib": [
@@ -9,8 +14,11 @@
         "moduleResolution": "Node",
         "types": [],
         "strict": true,
-        "baseUrl": "./lib/OpenComputers-Type-Declaration",
         "outDir": "./dist",
+        "baseUrl": "./src/",
+        "paths": {
+            "openos/*": ["../lib/index.d.ts"]
+        },
     },
     "tstl": {
         "noHeader": true, // Well, if you want to, you can add headers back

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tstl --watch"
+    "dev": "tstl --watch",
+    "build": "tstl",
+    "clean": "rm -rf dist"
   },
   "keywords": [],
   "author": "",
